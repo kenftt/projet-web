@@ -14,5 +14,14 @@
             @yield('content')
         </main>
 
+
+        <footer>
+            <p class="text-muted">&copy; Copyright {{date('Y')}}
+
+            @if (!Route::is('about'))
+                &middot; <a href="{{ route('about') }}">About us</p>
+            @endif
+            </p>
+        </footer>
     </body>
 </html>
