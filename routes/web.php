@@ -22,3 +22,19 @@ Route::get('/about-us', function() {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::get('/offre', function() {
+    return view('pages/offre');
+})->name('offre');
+
+Route::get('/company', function() {
+    return view('pages/company');
+})->name('company');
+
+Route::get('/profil', function() {
+    return view('pages/profil');
+})->name('profil');
+
+Route::get('/wishlist', function() {
+    return view('pages/wishlist');
+})->name('wishlist');
