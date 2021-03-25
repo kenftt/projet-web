@@ -22,3 +22,6 @@ Route::get('/about-us', function() {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+Route::middleware(['auth:sanctum', 'verified'])->get('/admin', function () {
+    return view('admin');
+})->name('admin');
