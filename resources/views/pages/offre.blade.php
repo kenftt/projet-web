@@ -1,12 +1,13 @@
 @extends('app')
 
 @section('title', 'Offre | ' . env('APP_NAME'))
+@section('page-title', 'Offre')
 
 @section('content')
     <section class="py-5 text-center container">
         <div class="row py-lg-5">
             <div class="col-lg-6 col-md-8 mx-auto">
-                <h1 class="fw-light">CESI Stage</h1>
+                <h1 class="fw-light">@yield('title',config('app.name'))</h1>
                 <p class="lead text-muted">Bienvenue sur CESI Stage, la plateforme pour trouver son stage.</p>
             </div>
         </div>

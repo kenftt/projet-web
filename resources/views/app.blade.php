@@ -24,7 +24,7 @@
 
 
 <body>
-    @include('pages.nav')
+    @livewire('navigation-menu')
 
     <main role="main">
         @yield('content')
