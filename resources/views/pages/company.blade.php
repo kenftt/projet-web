@@ -12,7 +12,7 @@
             </div>
         </div>
     </section>
-    <div class="" id="filters">
+    <div class="md:container md:mx-auto" id="filters">
         <!-- Bouton Nom de l'entreprise -->
         <div class="btn-group">
             <input type="text" placeholder="Rechercher">
