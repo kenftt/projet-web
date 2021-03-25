@@ -5,6 +5,9 @@
     -moz-user-select: none;
     user-select: none;
 }
+.btn-group {
+    margin-bottom: 4px;
+}
 
 @media (min-width: 768px) {
     .bd-placeholder-img-lg {
