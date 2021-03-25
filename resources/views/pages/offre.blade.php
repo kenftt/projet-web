@@ -1,6 +1,6 @@
 @extends('app')
 
-@section('title', env('APP_NAME'))
+@section('title', 'Offre | ' . env('APP_NAME'))
 
 @section('content')
     <section class="py-5 text-center container">
@@ -12,97 +12,96 @@
         </div>
     </section>
     <div class="" id="filters">
-        <!-- Bouton durée du stage -->
-        <div class="btn-group">
-            <button type="button" class="btn btn-primary">Durée du stage</button>
-            <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                <span class="visually-hidden">Toggle Dropdown</span>
-            </button>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">4 semaines</a></li>
-                <li><a class="dropdown-item" href="#">8 semaines</a></li>
-                <li><a class="dropdown-item" href="#">15 semaines</a></li>
-            </ul>
-        </div>
+<!-- Bouton durée du stage -->
+<div class="btn-group">
+    <button type="button" class="btn btn-primary">Durée du stage</button>
+    <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
+        aria-expanded="false">
+        <span class="visually-hidden">Toggle Dropdown</span>
+    </button>
+    <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">4 semaines</a></li>
+        <li><a class="dropdown-item" href="#">8 semaines</a></li>
+        <li><a class="dropdown-item" href="#">15 semaines</a></li>
+    </ul>
+</div>
 
-        <!-- Bouton secteur d'activité -->
-        <div class="btn-group">
-            <button type="button" class="btn btn-primary">Secteur d'activité</button>
-            <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                <span class="visually-hidden">Toggle Dropdown</span>
-            </button>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">WEB</a></li>
-                <li><a class="dropdown-item" href="#">Réseau</a></li>
-                <li><a class="dropdown-item" href="#">Cybersécutité</a></li>
-                <li><a class="dropdown-item" href="#">Excel</a></li>
-            </ul>
-        </div>
+<!-- Bouton secteur d'activité -->
+<div class="btn-group">
+    <button type="button" class="btn btn-primary">Secteur d'activité</button>
+    <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
+        aria-expanded="false">
+        <span class="visually-hidden">Toggle Dropdown</span>
+    </button>
+    <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">WEB</a></li>
+        <li><a class="dropdown-item" href="#">Réseau</a></li>
+        <li><a class="dropdown-item" href="#">Cybersécutité</a></li>
+        <li><a class="dropdown-item" href="#">Excel</a></li>
+    </ul>
+</div>
 
-        <!-- Bouton Niveau d'études -->
-        <div class="btn-group">
-            <button type="button" class="btn btn-primary">Niveau d'études</button>
-            <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                <span class="visually-hidden">Toggle Dropdown</span>
-            </button>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">A1</a></li>
-                <li><a class="dropdown-item" href="#">A2</a></li>
-                <li><a class="dropdown-item" href="#">A3</a></li>
-                <li><a class="dropdown-item" href="#">A4</a></li>
-                <li><a class="dropdown-item" href="#">A5</a></li>
-            </ul>
-        </div>
+<!-- Bouton Niveau d'études -->
+<div class="btn-group">
+    <button type="button" class="btn btn-primary">Niveau d'études</button>
+    <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
+        aria-expanded="false">
+        <span class="visually-hidden">Toggle Dropdown</span>
+    </button>
+    <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">A1</a></li>
+        <li><a class="dropdown-item" href="#">A2</a></li>
+        <li><a class="dropdown-item" href="#">A3</a></li>
+        <li><a class="dropdown-item" href="#">A4</a></li>
+        <li><a class="dropdown-item" href="#">A5</a></li>
+    </ul>
+</div>
 
-        <!-- Bouton Note tuteur -->
-        <div class="btn-group">
-            <button type="button" class="btn btn-primary">Note tuteur</button>
-            <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                <span class="visually-hidden">Toggle Dropdown</span>
-            </button>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">1 étoile</a></li>
-                <li><a class="dropdown-item" href="#">2 étoiles</a></li>
-                <li><a class="dropdown-item" href="#">3 étoiles</a></li>
-            </ul>
-        </div>
+<!-- Bouton Note tuteur -->
+<div class="btn-group">
+    <button type="button" class="btn btn-primary">Note tuteur</button>
+    <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
+        aria-expanded="false">
+        <span class="visually-hidden">Toggle Dropdown</span>
+    </button>
+    <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">1 étoile</a></li>
+        <li><a class="dropdown-item" href="#">2 étoiles</a></li>
+        <li><a class="dropdown-item" href="#">3 étoiles</a></li>
+    </ul>
+</div>
 
-        <!-- Bouton Note étudiant -->
-        <div class="btn-group">
-            <button type="button" class="btn btn-primary">Note étudiant</button>
-            <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                <span class="visually-hidden">Toggle Dropdown</span>
-            </button>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">1 étoile</a></li>
-                <li><a class="dropdown-item" href="#">2 étoiles</a></li>
-                <li><a class="dropdown-item" href="#">3 étoiles</a></li>
-                <li><a class="dropdown-item" href="#">4 étoiles</a></li>
-                <li><a class="dropdown-item" href="#">5 étoiles</a></li>
-            </ul>
-        </div>
+<!-- Bouton Note étudiant -->
+<div class="btn-group">
+    <button type="button" class="btn btn-primary">Note étudiant</button>
+    <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
+        aria-expanded="false">
+        <span class="visually-hidden">Toggle Dropdown</span>
+    </button>
+    <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">1 étoile</a></li>
+        <li><a class="dropdown-item" href="#">2 étoiles</a></li>
+        <li><a class="dropdown-item" href="#">3 étoiles</a></li>
+        <li><a class="dropdown-item" href="#">4 étoiles</a></li>
+        <li><a class="dropdown-item" href="#">5 étoiles</a></li>
+    </ul>
+</div>
 
-        <!-- Bouton Note étudiant -->
-        <div class="btn-group">
-            <button type="button" class="btn btn-primary">Localité</button>
-            <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                <span class="visually-hidden">Toggle Dropdown</span>
-            </button>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">1 étoile</a></li>
-                <li><a class="dropdown-item" href="#">2 étoiles</a></li>
-                <li><a class="dropdown-item" href="#">3 étoiles</a></li>
-                <li><a class="dropdown-item" href="#">4 étoiles</a></li>
-                <li><a class="dropdown-item" href="#">5 étoiles</a></li>
-            </ul>
-        </div>
-    </div>
+<!-- Bouton Note étudiant -->
+<div class="btn-group">
+    <button type="button" class="btn btn-primary">Localité</button>
+    <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
+        aria-expanded="false">
+        <span class="visually-hidden">Toggle Dropdown</span>
+    </button>
+    <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">1 étoile</a></li>
+        <li><a class="dropdown-item" href="#">2 étoiles</a></li>
+        <li><a class="dropdown-item" href="#">3 étoiles</a></li>
+        <li><a class="dropdown-item" href="#">4 étoiles</a></li>
+        <li><a class="dropdown-item" href="#">5 étoiles</a></li>
+    </ul>
+</div>
 
     <div class="album py-5 bg-light">
         <div class="container">
