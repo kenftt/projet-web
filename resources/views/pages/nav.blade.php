@@ -21,6 +21,9 @@
           <li class="nav-item">
             <a class="nav-link" href="{{route('about')}}">Contact</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login">se connecter</a>
+          </li>
         </ul>
       </div>
     </div>

@@ -23,6 +23,10 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
+Route::middleware(['auth:sanctum', 'verified'])->get('/admin', function () {
+    return view('admin');
+})->name('admin');
+
 Route::get('/offre', function() {
     return view('pages/offre');
 })->name('offre');
