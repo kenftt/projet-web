@@ -7,22 +7,19 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="home">Accueil</a>
+            <a class="nav-link" href="{{route('offre')}}">Offre</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Offre</a>
+            <a class="nav-link" href="{{route('company')}}">Entreprise</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Entreprise</a>
+            <a class="nav-link" href="{{route('profil')}}">Profil</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Profil</a>
+            <a class="nav-link" href="{{route('wishlist')}}">Wishlist</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Wishlist</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="{{route('about')}}">Contact</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="login">se connecter</a>
