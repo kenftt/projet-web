@@ -8,6 +8,34 @@
     <section class="py-5 text-center container">
     </section>
 
+    <style> /**
+        CSS WISHLIST
+        **/
+
+
+
+
+
+
+        .panel-body { padding:0px; }
+        .panel-footer .pagination { margin: 0; }
+        .panel .glyphicon,.list-group-item .glyphicon { margin-right:5px; }
+        .panel-body .radio, .checkbox { display:inline-block;margin:0px; }
+        .panel-body input[type=checkbox]:checked + label { text-decoration: line-through;color: rgb(128, 144, 160); }
+        .list-group-item:hover, a.list-group-item:focus {text-decoration: none;background-color: rgb(245, 245, 245);}
+        .list-group { margin-bottom:0px; }
+
+        .essai {
+            border-radius:12px;
+            background-color: #648ad4;
+        }
+
+        .oui {
+            margin-left: 20%;
+
+        }</style>
+
+
     <body style="">
 
 
@@ -74,7 +102,7 @@
             </td>
 
             <td class="text-right">
-                <button class="button" data-apptk="1f1kqh7qsn5a6808" aria-haspopup="true" type="button"><span>Mettre à jour le statut</span></button>
+                <button class="essai" data-apptk="1f1kqh7qsn5a6808" aria-haspopup="true" type="button"><span>Mettre à jour le statut</span></button>
             </td>
         </tr>
         <tr>
@@ -91,7 +119,7 @@
             </td>
 
             <td class="text-right">
-                <button class="button" data-apptk="1f1kqh7qsn5a6808" aria-haspopup="true" type="button"><span>Mettre à jour le statut</span></button>
+                <button class="essai" data-apptk="1f1kqh7qsn5a6808" aria-haspopup="true" type="button"><span>Mettre à jour le statut</span></button>
             </td>
         </tr>
         <tr>
@@ -108,7 +136,7 @@
             </td>
 
             <td class="text-right">
-                <button class="button" data-apptk="1f1kqh7qsn5a6808" aria-haspopup="true" type="button"><span>Mettre à jour le statut</span></button>
+                <button class="essai" data-apptk="1f1kqh7qsn5a6808" aria-haspopup="true" type="button"><span>Mettre à jour le statut</span></button>
             </td>
         </tr>
         </tbody>
