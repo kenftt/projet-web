@@ -12,25 +12,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/',[App\Http\Controllers\CompanyController::class,'index'])->name('index');
-
-
-Route::get('/create', function() {
-    return view('companies/create');
-})->name('create');
-
-Route::get('/edit', function() {
-    return view('companies/edit');
-})->name('edit');
-
-Route::get('/layout', function() {
-    return view('companies/layout');
-})->name('layout');
-
-Route::get('/show', function() {
-    return view('companies/show');
-})->name('show');
+Route::resource('companies', App\Http\Controllers\CompanyController::class);
+Route::get('/',[App\Http\Controllers\Offer\MainController::class,'index'])->name('index');
 
 Route::get('/about-us', function() {
     return view('pages/about');

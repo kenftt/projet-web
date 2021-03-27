@@ -2,19 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\DB;
-use App\Company as AppCompany;
 use App\Models\Company;
 use Illuminate\Http\Request;
 
 class CompanyController extends Controller
 {
-
-    public function __construct()
-	{
-		$this->middleware('auth');
-	}
-
     /**
      * Display a listing of the resource.
      *
@@ -22,11 +14,12 @@ class CompanyController extends Controller
      */
     public function index()
     {
+        //recupere tout les companies
+        $companies = Company::all();
 
-        $company = DB::table('companies')->paginate(3);
-
-        return view('companies.index', ['companies' => $company]);
-
+        //charge la view et passe les companies
+        return view('companies.index',compact('companies'))
+            ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     /**
@@ -48,27 +41,27 @@ class CompanyController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nom_ent' => 'required',
-            'secteur_ent' => 'required',
-            'adresse_ent' => 'required',
-            'stagiaire_pris' => 'required',
-            'note_stagiaire_ent' => 'required',
-            'note_pilote_ent' => 'required',
+            'nom_ent'=>'required',
+            'secteur_ent'=>'required',
+            'adresse_ent'=>'required',
+            'stagiaire_pris'=>'required',
+            'note_stagiaire_ent'=>'required',
+            'note_pilote_ent'=>'required',
         ]);
 
-        AppCompany::create($request->all());
+        Company::create($request->all());
 
         return redirect()->route('companies.index')
-        ->with('success','Company created successfully.');
+                        ->with('success','Entreprise créée.');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Company  $company
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(AppCompany $company)
+    public function show(Company $company)
     {
         return view('companies.show',compact('company'));
     }
@@ -76,10 +69,10 @@ class CompanyController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Company  $company
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(AppCompany $company)
+    public function edit(Company $company)
     {
         return view('companies.edit',compact('company'));
     }
@@ -88,38 +81,37 @@ class CompanyController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Company  $company
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, AppCompany $company)
+    public function update(Request $request, Company $company)
     {
         $request->validate([
-            'nom_ent' => 'required',
-            'secteur_ent' => 'required',
-            'adresse_ent' => 'required',
-            'stagiaire_pris' => 'required',
-            'note_stagiaire_ent' => 'required',
-            'note_pilote_ent' => 'required',
+            'nom_ent'=>'required',
+            'secteur_ent'=>'required',
+            'adresse_ent'=>'required',
+            'stagiaire_pris'=>'required',
+            'note_stagiaire_ent'=>'required',
+            'note_pilote_ent'=>'required',
         ]);
 
-        $company->update($request->all());
+        Company::create($request->all());
 
         return redirect()->route('companies.index')
-                        ->with('success','Company updated successfully');
-
+                        ->with('success','Entreprise créée.');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Company  $company
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(AppCompany $company)
+    public function destroy(Company $company)
     {
         $company->delete();
 
         return redirect()->route('companies.index')
-                        ->with('success','Company deleted successfully');
+                        ->with('success','Entreprise supprimée.');
     }
 }
