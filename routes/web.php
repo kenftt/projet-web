@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::resource('companies', App\Http\Controllers\CompanyController::class);
 Route::get('/',[App\Http\Controllers\Offer\MainController::class,'index'])->name('index');
 
 Route::get('/about-us', function() {
