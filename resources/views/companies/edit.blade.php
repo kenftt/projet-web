@@ -23,7 +23,7 @@
         </div>
 @endif
 
-<form action="{{ route('update',$company->id_ent) }}" method="POST">
+<form action="{{ route('index',$company->id_ent) }}" method="GET">
 @csrf
 @method('PUT')
   <div class="form-group">
