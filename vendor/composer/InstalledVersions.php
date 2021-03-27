@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '065bae0c0d49d4da02722e08a9f865ac47a5d361',
+    'reference' => 'ee8917a35ea8e1c816114c493ef8811e4675bc24',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -93,6 +93,33 @@ private static $installed = array (
       array (
       ),
       'reference' => '8f8a6e48c5ecb0f991c2fdcf5f154a47d85f9ffd',
+    ),
+    'doctrine/cache' => 
+    array (
+      'pretty_version' => '1.10.2',
+      'version' => '1.10.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '13e3381b25847283a91948d04640543941309727',
+    ),
+    'doctrine/dbal' => 
+    array (
+      'pretty_version' => '2.12.1',
+      'version' => '2.12.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'adce7a954a1c2f14f85e94aed90c8489af204086',
+    ),
+    'doctrine/event-manager' => 
+    array (
+      'pretty_version' => '1.1.1',
+      'version' => '1.1.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '41370af6a30faa9dc0368c4a6814d596e81aba7f',
     ),
     'doctrine/inflector' => 
     array (
@@ -482,6 +509,15 @@ private static $installed = array (
       ),
       'reference' => 'daa11c43729510b3700bc34d414664966b03bffe',
     ),
+    'kitloong/laravel-migrations-generator' => 
+    array (
+      'pretty_version' => '4.4.2',
+      'version' => '4.4.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '15b36cbf38019bf5d96dd960c7a865fa5f931d48',
+    ),
     'kodova/hamcrest-php' => 
     array (
       'replaced' => 
@@ -523,7 +559,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '065bae0c0d49d4da02722e08a9f865ac47a5d361',
+      'reference' => 'ee8917a35ea8e1c816114c493ef8811e4675bc24',
     ),
     'laravel/sail' => 
     array (
