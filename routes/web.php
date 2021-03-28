@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::resource('companies', App\Http\Controllers\CompanyController::class);
+Route::resource('users', App\Http\Controllers\usersController::class);
 Route::get('/',[App\Http\Controllers\Offer\MainController::class,'index'])->name('index');
 
 Route::get('/about-us', function() {
@@ -42,3 +43,4 @@ Route::get('/profil', function() {
 Route::get('/wishlist', function() {
     return view('pages/wishlist');
 })->name('wishlist');
+
