@@ -3,10 +3,10 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
             <div class="flex">
-                <!-- Titre -->
+                <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
                     <a href="{{ route('offre') }}">
-                        <a class="text-blue-500">{{ env('APP_NAME') }}</a>
+                        <a class="text-blue-50">{{ env('APP_NAME') }}</a>
                     </a>
                 </div>
 

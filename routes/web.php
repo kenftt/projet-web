@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::resource('offers', App\Http\Controllers\OfferController::class);
 Route::resource('companies', App\Http\Controllers\CompanyController::class);
 Route::resource('users', App\Http\Controllers\usersController::class);
 Route::get('/',[App\Http\Controllers\Offer\MainController::class,'index'])->name('index');

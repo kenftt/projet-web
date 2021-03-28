@@ -18,7 +18,7 @@ class CompanyController extends Controller
         $companies = Company::all();
 
         //charge la view et passe les companies
-        return view('companies.index',compact('companies'))
+        return view('companies.index', compact('companies'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
@@ -99,7 +99,7 @@ class CompanyController extends Controller
 
         Company::whereid_ent($id)->update($data);
         return redirect()->route('companies.index')
-                        ->with('completed', 'Company updated');
+                        ->with('completed', 'Entreprise mise à jour');
     }
 
     /**
