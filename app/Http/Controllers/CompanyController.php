@@ -72,8 +72,9 @@ class CompanyController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Company $company)
+    public function edit($id)
     {
+        $company = Company::findOrFail($id);
         return view('companies.edit',compact('company'));
     }
 
@@ -84,9 +85,9 @@ class CompanyController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Company $company)
+    public function update(Request $request, $id)
     {
-        $request->validate([
+        $data = $request->validate([
             'nom_ent'=>'required',
             'secteur_ent'=>'required',
             'adresse_ent'=>'required',
@@ -95,10 +96,10 @@ class CompanyController extends Controller
             'note_pilote_ent'=>'required',
         ]);
 
-        Company::create($request->all());
 
+        Company::whereid_ent($id)->update($data);
         return redirect()->route('companies.index')
-                        ->with('success','Entreprise créée.');
+                        ->with('completed', 'Company updated');
     }
 
     /**
