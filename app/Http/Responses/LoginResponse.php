@@ -18,6 +18,6 @@ class LoginResponse implements LoginResponseContract
         }
             return $request->wantsJson()
                 ? response()->json(['two_factor'=> false])
-                 : redirect()->intended(config('fortify.home'));
+                 : redirect()->intended(config('offre'));
     }
 }

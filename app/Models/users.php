@@ -13,4 +13,9 @@ class users extends Model
     protected $fillable = [
         'name','prenom','password', 'email', 'delegue', 'pilote','admin', 'id_centre', 'id_promotion',
     ];
+    protected $hidden = [
+        'password',
+
+    ];
+
 }
