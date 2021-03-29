@@ -68,6 +68,12 @@
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
+                        <strong>admin:</strong>
+                        <input type="number" name="admin" value="{{ $user->admin }}" class="form-control" placeholder="1">
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
                         <strong>Promotion:</strong>
                         <input type="number" name="id_promotion"  value="{{ $user->id_promotion }}" class="form-control" placeholder="1">
                     </div>
