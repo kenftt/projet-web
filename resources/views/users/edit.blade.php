@@ -48,12 +48,14 @@
                         <input type="email" name="email" value="{{ $user->email }}" class="form-control" placeholder="Adresse">
                     </div>
                 </div>
+
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>password:</strong>
-                        <x-jet-input id="password" class="block mt-1 w-full" value="{{ $user->password }}" type="password" name="password" required autocomplete="new-password" />
+                        <input type="password" name="password" value="{{ $user->password }}" class="form-control" placeholder="password">
                     </div>
                 </div>
+
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>delegue:</strong>
@@ -64,6 +66,12 @@
                     <div class="form-group">
                         <strong>pilote:</strong>
                         <input type="number" name="pilote" value="{{ $user->pilote }}" class="form-control" placeholder="1">
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <strong>admin:</strong>
+                        <input type="number" name="admin" value="{{ $user->admin }}" class="form-control" placeholder="1">
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">

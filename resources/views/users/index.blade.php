@@ -27,10 +27,12 @@
         <tr>
             <td>id</td>
             <td>Name</td>
+            <td>prenom</td>
             <td>Email</td>
             <td>password</td>
             <td>delegue</td>
             <td>pilote</td>
+            <td>admin</td>
             <td>centre</td>
             <td>promotion</td>
 
@@ -41,10 +43,12 @@
         <tr>
             <td>{{ ++$i }}</td>
             <td>{{ $user->name }}</td>
+            <td>{{ $user->prenom }}</td>
             <td>{{ $user->email }}</td>
             <td>{{ $user->password }}</td>
             <td>{{ $user->delegue }}</td>
             <td>{{ $user->pilote }}</td>
+            <td>{{ $user->admin }}</td>
             <td>{{ $user->id_centre }}</td>
             <td>{{ $user->id_promotion }}</td>
             <form action="{{ route('users.destroy',$user->id) }}" method="POST">

@@ -30,49 +30,55 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Name :</strong>
-                <input type="text" name="name" class="form-control" placeholder="Nom">
+                <input id="name"  type="text" name="name" class="form-control" placeholder="Nom">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>prenom :</strong>
-                <input type="text" name="prenom" class="form-control" placeholder="prenom">
+                <input id="prenom" type="text" name="prenom" class="form-control" placeholder="prenom">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>email:</strong>
-                <input type="email" name="email" class="form-control" placeholder="Adresse">
+                <input id="email" type="email" name="email" class="form-control" placeholder="Adresse">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>password:</strong>
-                <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
+                <input id="password" class="form-control" type="password" name="password" placeholder="password" />
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>delegue:</strong>
-                <input type="number" name="delegue" class="form-control" placeholder="1">
+                <input id="delegue" type="number" name="delegue" class="form-control" placeholder="1">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>pilote:</strong>
-                <input type="number" name="pilote" class="form-control" placeholder="1">
+                <input id="pilote" type="number" name="pilote" class="form-control" placeholder="1">
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>admin:</strong>
+                <input id="admin" type="number" name="admin" class="form-control" placeholder="1">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Promotion:</strong>
-                <input type="number" name="id_promotion" class="form-control" placeholder="1">
+                <input id="id_promotion" type="number" name="id_promotion" class="form-control" placeholder="1">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>centre:</strong>
-                <input type="number" name="id_centre" class="form-control" placeholder="1">
+                <input id="id_centre" type="number" name="id_centre" class="form-control" placeholder="1">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">

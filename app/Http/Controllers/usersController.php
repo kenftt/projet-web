@@ -13,6 +13,7 @@ class usersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
         $users = users::all();
@@ -27,14 +28,11 @@ class usersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(users $user)
     {
-
-            // load the create form (app/views/sharks/create.blade.php)
-            return view('users.create');
+        return view('users.create');
 
     }
-
 
     /**
      * Display the specified resource.
@@ -75,19 +73,21 @@ class usersController extends Controller
         return redirect()->route('users.index')
                         ->with('success','Entreprise supprimée.');
     }
-    public function store(Request $request, users $user)
+    public function store(Request $user)
     {
-             $request->validate([
-            'name'       => 'required',
-            'prenom'       => 'required',
-            'email'      => 'required|email',
-            'password'       => 'required',
-            'delegue' => 'required|numeric',
-            'pilote' => 'required|numeric',
-            'id_centre' => 'required|numeric',
-            'id_promotion' => 'required|numeric',
-        ]);
-        users::create($request->all());
+
+
+        users::create([
+            'name' => $user['name'],
+            'prenom' =>$user['prenom'],
+            'email' => $user['email'],
+            'password' => Hash::make($user['password']),
+            'delegue' =>$user['delegue'],
+            'pilote' => $user['pilote'],
+            'admin' => $user['admin'],
+            'id_centre' =>$user['id_centre'],
+            'id_promotion' => $user['id_promotion']]);
+
         return redirect()->route('users.index')
                         ->with('success','user créée.');
     }
@@ -100,20 +100,20 @@ class usersController extends Controller
     * @param  int  $id
     * @return \Illuminate\Http\Response
     */
-    public function update(Request $request, $id)
+    public function update(Request $user, $id)
     {
-       $data = $request->validate([
-            'name'       => 'required',
-            'prenom'       => 'required',
-            'password' => 'required',
-            'email'      => 'required|email',
-            'delegue' => 'required|numeric',
-            'pilote' => 'required|numeric',
-            'id_centre' => 'required|numeric',
-            'id_promotion' => 'required|numeric',
-        ]);
 
-        users::whereid($id)->update($data);
+
+        users::whereid($id)->update([
+            'name' => $user['name'],
+            'prenom' =>$user['prenom'],
+            'email' => $user['email'],
+            'password' => Hash::make($user['password']),
+            'delegue' =>$user['delegue'],
+            'pilote' => $user['pilote'],
+            'admin' => $user['admin'],
+            'id_centre' =>$user['id_centre'],
+            'id_promotion' => $user['id_promotion']]);
         return redirect()->route('users.index')
                         ->with('success','user créée.');
     }

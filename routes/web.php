@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Back\AdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -45,3 +45,8 @@ Route::get('/wishlist', function() {
     return view('pages/wishlist');
 })->name('wishlist');
 
+
+
+Route::get('register', function() {
+    return view('auth/register');
+})->name('register');

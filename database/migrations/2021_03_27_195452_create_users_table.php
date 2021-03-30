@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('cv', 50)->nullable();
             $table->tinyInteger('delegue')->nullable();
             $table->tinyInteger('pilote')->nullable();
+            $table->tinyInteger('admin')->nullable();
             $table->integer('id_centre')->nullable()->index('Utilisateur_Lieu0_FK');
             $table->integer('id_promotion')->nullable()->index('Utilisateur_Annee1_FK');
             $table->integer('id_utilisateur_est_pilote_par')->nullable()->index('Utilisateur_Utilisateur2_FK');
