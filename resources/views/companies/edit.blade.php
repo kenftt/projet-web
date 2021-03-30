@@ -1,20 +1,20 @@
-@extends('companies.layout')
+@extends('app')
 
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Edit Company</h2>
+                <h2>Modifier une entreprise</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('companies.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('companies.index') }}"> Retour</a>
             </div>
         </div>
     </div>
 
     @if ($errors->any())
         <div class="alert alert-danger">
-            <strong>Whoops!</strong> There were some problems with your input.<br><br>
+            <strong>Attention !</strong> Erreur lors de la saisie.<br><br>
             <ul>
                 @foreach ($errors->all() as $error)
                     <li>{{ $error }}</li>
@@ -27,7 +27,7 @@
         @csrf
         @method('PUT')
 
-         <div class="row">>
+         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Nom :</strong>
@@ -48,7 +48,7 @@
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>NB stagiaire:</strong>
+                    <strong>Nombre de stagiaires CESI déjà accéptés:</strong>
                     <input type="text" name="stagiaire_pris" value="{{ $company->stagiaire_pris }}" class="form-control" placeholder="Nb stagiaire pris">
                 </div>
             </div>
@@ -60,12 +60,12 @@
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Note tuteur:</strong>
+                    <strong>Note Tuteur:</strong>
                     <input type="text" name="note_pilote_ent" value="{{ $company->note_pilote_ent }}" class="form-control" placeholder="Name">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" class="btn btn-primary">Modifier</button>
             </div>
         </div>
 

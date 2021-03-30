@@ -13,7 +13,7 @@
     <a href="users">Editer un profil</a>
     <a href="companies">Editer une entreprise</a>
     <a href="offers">Editer une offre</a>
-    <a href="#">Editer une page</a>
+
   </div>
 
   <!-- Page content -->

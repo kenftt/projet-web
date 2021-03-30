@@ -21419,3 +21419,12 @@ process.umask = function() { return 0; };
 /******/
 /******/ })()
 ;
+
+
+window.onload = () => {
+    'use strict';
+
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("/serviceWorker.js");
+    }
+  }

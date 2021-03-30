@@ -12,13 +12,41 @@ class CompanyController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         //recupere tout les companies
-        $companies = Company::all();
+        $companies = Company::where([
+            ['nom_ent', '!=', Null],
+            [function ($query) use ($request) {
+                if (($term = $request->term)) {
+                    $query->orWhere('nom_ent', 'LIKE', '%' . $term . '%')->get();
+                }
+            }]
+        ])
+            ->orderBy("id_ent", "desc")
+            ->paginate(10);
 
         //charge la view et passe les companies
         return view('companies.index', compact('companies'))
+            ->with('i', (request()->input('page', 1) - 1) * 5);
+    }
+
+    public function CompanyIndex(Request $request)
+    {
+        //recupere tout les companies
+        $companies = Company::where([
+            ['nom_ent', '!=', Null],
+            [function ($query) use ($request) {
+                if (($term = $request->term)) {
+                    $query->orWhere('nom_ent', 'LIKE', '%' . $term . '%')->get();
+                }
+            }]
+        ])
+            ->orderBy("id_ent", "desc")
+            ->paginate(10);
+
+        //charge la view et passe les companies
+        return view('pages.company', compact('companies'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
