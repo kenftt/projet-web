@@ -15,6 +15,12 @@
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
     <!-- Favicons -->
     <link rel="icon" href="{{asset('img/favicon.ico')}}">
+    <!-- Manifest/PWA -->
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/assets/icons/icon-96x96.png">
+    <meta name="apple-mobile-web-app-status-bar" content="white">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="white">
 
 
 </head>
@@ -46,5 +52,16 @@
 
 
 </body>
+
+<script>
+    window.onload = () => {
+  'use strict';
+
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("/serviceWorker.js");
+  }
+}
+</script>
+
 
 </html>

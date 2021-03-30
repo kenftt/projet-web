@@ -2,6 +2,8 @@
 
 use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
+
 
 define('LARAVEL_START', microtime(true));
 
@@ -53,3 +55,10 @@ $response = tap($kernel->handle(
 ))->send();
 
 $kernel->terminate($request, $response);
+
+Route::group(['as' => 'laravelpwa.'], function()
+{
+    Route::get('/manifest.json', 'LaravelPWAController@manifestJson')
+    ->name('manifest');
+    Route::get('/offline/', 'LaravelPWAController@offline');
+});
