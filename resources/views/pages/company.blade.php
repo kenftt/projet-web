@@ -17,7 +17,15 @@
         <div class="btn-group">
             <input type="text" placeholder="Rechercher">
         </div>
+        @if (Auth::check())
 
+        <option value="">Select nom</option>
+        @foreach ($companies as $company)
+        <option value="{{$company->id_ent}}">
+            {{$company->nom_ent}}
+        </option>
+        @endforeach
+        @endif
         <!-- Bouton secteur d'activité -->
         <div class="btn-group">
             <button type="button" class="btn btn-primary">Secteur d'activité</button>

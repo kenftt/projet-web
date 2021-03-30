@@ -12,8 +12,7 @@
 <div class="sidenav">
     <a href="users">Editer un profil</a>
     <a href="companies">Editer une entreprise</a>
-    <a href="#">Editer une offre</a>
-    <a href="#">Editer une page</a>
+    <a href="offers">Editer une offre</a>
   </div>
 
   <!-- Page content -->
