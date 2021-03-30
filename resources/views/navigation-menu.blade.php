@@ -12,20 +12,13 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
-                    </x-jet-nav-link>
 
-                    <x-jet-nav-link href="{{ route('offre') }}" :active="request()->routeIs('offre')">
+                    <x-jet-nav-link href="offers" :active="request()->routeIs('offre')">
                         {{ __('Offre') }}
                     </x-jet-nav-link>
 
-                    <x-jet-nav-link href="{{ route('company') }}" :active="request()->routeIs('company')">
+                    <x-jet-nav-link href="companies" :active="request()->routeIs('company')">
                         {{ __('Entreprise') }}
-                    </x-jet-nav-link>
-
-                    <x-jet-nav-link href="{{ route('profil') }}" :active="request()->routeIs('profil')">
-                        {{ __('Profil') }}
                     </x-jet-nav-link>
 
                     <x-jet-nav-link href="{{ route('wishlist') }}" :active="request()->routeIs('wishlist')">

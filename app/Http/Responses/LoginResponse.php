@@ -11,7 +11,7 @@ class LoginResponse implements LoginResponseContract
     @return \Symfony\Component\HttpFoundation\Response
     */
     public function toResponse($request){
-        if(auth()->user()->pilote){
+        if(auth()->user()->admin){
             return $request->wantsJson()
                 ? response()->json(['two_factor'=> false])
                 : redirect()->route('admin');
@@ -20,4 +20,5 @@ class LoginResponse implements LoginResponseContract
                 ? response()->json(['two_factor'=> false])
                  : redirect()->intended(config('offre'));
     }
+
 }
