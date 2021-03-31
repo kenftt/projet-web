@@ -14,12 +14,22 @@ class usersController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function index()
+    public function index(Request $request)
     {
-        $users = users::all();
+        //recupere tout les companies
+        $users = users::where([
+            ['name', '!=', Null],
+            [function ($query) use ($request) {
+                if (($nomRecherche = $request->nomRecherche)) {
+                    $query->orWhere('name', 'LIKE', '%' . $nomRecherche . '%')->get();
+                }
+            }]
+        ])
+            ->orderBy("id", "desc")
+            ->paginate(10);
 
-        // load the view and pass the sharks
-        return view('users.index',compact('users'))
+        //charge la view et passe les companies
+        return view('users.index', compact('users'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
