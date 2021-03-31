@@ -1,13 +1,10 @@
-@extends('users.layout')
+@extends('app')
 
 @section('content')
 <div class="row">
     <div class="col-lg-12 margin-tb">
-        <div class="pull-left">
-            <h2>Add New users</h2>
-        </div>
         <div class="pull-right">
-            <a class="btn btn-primary" href="{{ route('users.index') }}"> Back</a>
+            <a class="btn btn-primary" href="{{ route('users.index') }}"> retour</a>
         </div>
     </div>
 </div>
@@ -29,60 +26,60 @@
      <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Name :</strong>
+                <strong>Nom :</strong>
                 <input id="name"  type="text" name="name" class="form-control" placeholder="Nom">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>prenom :</strong>
-                <input id="prenom" type="text" name="prenom" class="form-control" placeholder="prenom">
+                <strong>Prénom :</strong>
+                <input id="prenom" type="text" name="prenom" class="form-control" placeholder="Prénom">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>email:</strong>
-                <input id="email" type="email" name="email" class="form-control" placeholder="Adresse">
+                <strong>Email:</strong>
+                <input id="email" type="email" name="email" class="form-control" placeholder="Email">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>password:</strong>
-                <input id="password" class="form-control" type="password" name="password" placeholder="password" />
+                <strong>Mot de passe :</strong>
+                <input id="password" class="form-control" type="password" name="password" placeholder="Mot de passe " />
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>delegue:</strong>
-                <input id="delegue" type="number" name="delegue" class="form-control" placeholder="1">
+                <strong>Délégué:</strong>
+                <input id="delegue" type="number" name="delegue" class="form-control" placeholder="Délégué">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>pilote:</strong>
-                <input id="pilote" type="number" name="pilote" class="form-control" placeholder="1">
+                <strong>Pilote:</strong>
+                <input id="pilote" type="number" name="pilote" class="form-control" placeholder="Pilote">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>admin:</strong>
-                <input id="admin" type="number" name="admin" class="form-control" placeholder="1">
+                <strong>Admin:</strong>
+                <input id="admin" type="number" name="admin" class="form-control" placeholder="Admin">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Promotion:</strong>
-                <input id="id_promotion" type="number" name="id_promotion" class="form-control" placeholder="1">
+                <input id="id_promotion" type="number" name="id_promotion" class="form-control" placeholder="Promotion">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>centre:</strong>
-                <input id="id_centre" type="number" name="id_centre" class="form-control" placeholder="1">
+                <strong>Centre:</strong>
+                <input id="id_centre" type="number" name="id_centre" class="form-control" placeholder="Centre">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Créer un utilisateur</button>
         </div>
     </div>
 
