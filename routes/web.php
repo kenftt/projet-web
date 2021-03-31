@@ -43,3 +43,5 @@ Route::get('/wishlist', function() {
 Route::get('register', function() {
     return view('auth/register');
 })->name('register');
+
+
