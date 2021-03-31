@@ -20,16 +20,20 @@
     .revenir{
     margin: 30 auto;
     }
-    .button {
+    .test {
         width: 100px;
         margin: auto;
         text-align: center;
+        border: solid;
     }
     .pt-6 {
         width: 100px;
         margin: auto;
         text-align: center;
     }
+
+
+
     </style>
 
 @section('content')
@@ -70,14 +74,23 @@
       <div class="md:w-2/3"></div>
     </div>
   </form>
-  <div class="button md:w-1/3">
-    <button class="shadow bg-teal-400 hover:bg-teal-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">
-      Envoyer un mail
-    </button>
+  <form class="test">
+    <input type="button" class="bouton" value="SEND"  onClick="Message()">
+    </form>
+    <script type="text/javascript">
+       function Message() {
+           var msg="Message bien envoyé";
+           console.log(msg)
+           alert(msg);
+           window.location.href = 'http://cesistage.com';
+       }
+    </script>
+    </a>
   </div>
     <div class=revenir>
     <p><a href="offers-">Revenir à la page d'accueil</a></p>
 </div>
+
 
 
 @endsection
