@@ -1,14 +1,26 @@
-const staticCacheName = "cache-v1";
-const assets = ["/", "/about", "/company", "/offre", "wishlist", "/stage"];
-
+var cacheName = 'js13kPWA-v1';
+var appShellFiles = [
+  '/offline',
+    '/css/app.css',
+    '/js/app.js',
+    '/images/icons/icon-72x72.png',
+    '/images/icons/icon-96x96.png',
+    '/images/icons/icon-128x128.png',
+    '/images/icons/icon-144x144.png',
+    '/images/icons/icon-152x152.png',
+    '/images/icons/icon-192x192.png',
+    '/images/icons/icon-384x384.png',
+    '/images/icons/icon-512x512.png',
+];
 // ajout fichiers en cache
-self.addEventListener("install", (e) => {
-  e.waitUntil(
-    caches.open(staticCacheName).then((cache) => {
-      cache.addAll(assets);
-    })
-  );
-});
+self.addEventListener('install', (e) => {
+    e.waitUntil(
+      caches.open('js13kPWA-v2').then((cache) => {
+        return cache.addAll(contentToCache);
+      })
+    );
+  });
+
 
 self.addEventListener("fetch", (event) => {
   event.respondWith(
