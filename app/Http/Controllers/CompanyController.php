@@ -18,8 +18,8 @@ class CompanyController extends Controller
         $companies = Company::where([
             ['nom_ent', '!=', Null],
             [function ($query) use ($request) {
-                if (($term = $request->term)) {
-                    $query->orWhere('nom_ent', 'LIKE', '%' . $term . '%')->get();
+                if (($nomRecherche = $request->nomRecherche)) {
+                    $query->orWhere('nom_ent', 'LIKE', '%' . $nomRecherche . '%')->get();
                 }
             }]
         ])

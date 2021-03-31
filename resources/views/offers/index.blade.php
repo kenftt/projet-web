@@ -1,4 +1,4 @@
-@extends('offers.layout')
+@extends('app')
 
 @section('content')
     <div class="row">
@@ -12,13 +12,34 @@
         </div>
     </div>
 
+    <div>
+        <div class="mx-auto pull-right">
+            <div class="">
+                <form action="{{ route('offers.index') }}" method="GET" role="search">
+                    <div class="input-group">
+                        <button class="btn btn-info" type="submit" title="Rechercher une offre">
+                            <span class="fas fa-search"></span>
+                        </button>
+                        <a href="{{ route('offers.index') }}" class="">
+                            <button class="btn btn-danger" type="button" title="Rafraichir les données">
+                                <span class="fas fa-sync-alt"></span>
+                            </button>
+                        </a>
+                        <input type="text" class="form-control mr-2" name="term"
+                            placeholder="Rechercher une offre" id="term">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
     @if ($message = Session::get('success'))
         <div class="alert alert-success">
             <p>{{ $message }}</p>
         </div>
     @endif
 
-    <table class="table table-bordered">
+    <table class="table table-bordered table-responsive-lg">
         <tr>
             <th>N°</th>
             <th>Duree du stage (en semaines)</th>

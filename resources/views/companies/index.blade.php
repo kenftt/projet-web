@@ -1,12 +1,9 @@
 @extends('app')
 
-
-
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Menu administrateur Entreprise</h2>
             </div>
             <div class="pull-right">
                 <a class="btn btn-success" href="{{ route('companies.create') }}"> Créer une nouvelle entreprise</a>
@@ -21,12 +18,12 @@
                                     <span class="fas fa-search"></span>
                                 </button>
                                 <a href="{{ route('companies.index') }}" class="">
-                                    <button class="btn btn-danger" type="button" title="Rafraichir la page">
+                                    <button class="btn btn-danger" type="button" title="Rafraichir les données">
                                         <span class="fas fa-sync-alt"></span>
                                     </button>
                                 </a>
-                                <input type="text" class="form-control mr-2" name="term"
-                                    placeholder="Rechercher une entreprise" id="term">
+                                <input type="text" class="form-control mr-2" name="nomRecherche"
+                                    placeholder="Rechercher une entreprise" id="nomRecherche">
                             </div>
                         </form>
                     </div>
@@ -45,9 +42,9 @@
                     <th>Nom entreprise</th>
                     <th>Secteur</th>
                     <th>Adresse</th>
-                    <th>Nombre de stagiaire pris</th>
-                    <th>Note stagiaire</th>
-                    <th>Note pilote</th>
+                    <th>Nombre de stagiaire CESI déjà pris</th>
+                    <th>Note des stagiaires</th>
+                    <th>Note des pilotes</th>
                     <th width="280px">Action</th>
                 </tr>
                 @foreach ($companies as $company)

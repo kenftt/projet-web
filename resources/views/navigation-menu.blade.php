@@ -3,9 +3,9 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
             <div class="flex">
-                <!-- Logo -->
+                <!-- Titre -->
                 <div class="flex-shrink-0 flex items-center">
-                    <a href="{{ route('offre') }}">
+                    <a>
                         <a class="text-blue-50">{{ env('APP_NAME') }}</a>
                     </a>
                 </div>
@@ -14,7 +14,7 @@
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     @if (Auth::check())
 
-                    <x-jet-nav-link href="offers" :active="request()->routeIs('offre')">
+                    <x-jet-nav-link href="offers" :active="request()->routeIs('offers')">
                         {{ __('Offre') }}
                     </x-jet-nav-link>
 
@@ -29,11 +29,10 @@
                     <x-jet-nav-link href="{{ route('about') }}" :active="request()->routeIs('about')">
                         {{ __('Contact') }}
                     </x-jet-nav-link>
-                    @elseif (Auth::check())
+                    @endif
                         <x-jet-nav-link href="{{ route('login') }}" :active="request()->routeIs('login')">
                             {{ __('Se connecter') }}
                         </x-jet-nav-link>
-                    @endif
                 </div>
             </div>
 
@@ -109,16 +108,12 @@
                 {{ __('Dashboard') }}
             </x-jet-responsive-nav-link>
 
-            <x-jet-responsive-nav-link href="{{ route('offre') }}" :active="request()->routeIs('offre')">
+            <x-jet-responsive-nav-link href="offers" :active="request()->routeIs('offers')">
                 {{ __('Offre') }}
             </x-jet-responsive-nav-link>
 
-            <x-jet-responsive-nav-link href="{{ route('company') }}" :active="request()->routeIs('company')">
+            <x-jet-responsive-nav-link href="companies" :active="request()->routeIs('companies')">
                 {{ __('Entreprise') }}
-            </x-jet-responsive-nav-link>
-
-            <x-jet-responsive-nav-link href="{{ route('profil') }}" :active="request()->routeIs('profil')">
-                {{ __('Profil') }}
             </x-jet-responsive-nav-link>
 
             <x-jet-responsive-nav-link href="{{ route('wishlist') }}" :active="request()->routeIs('wishlist')">

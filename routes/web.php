@@ -15,7 +15,7 @@ use App\Http\Controllers\Back\AdminController;
 Route::resource('offers', App\Http\Controllers\OfferController::class);
 Route::resource('companies', App\Http\Controllers\CompanyController::class);
 Route::resource('users', App\Http\Controllers\usersController::class);
-Route::get('/',[App\Http\Controllers\Offer\MainController::class,'index'])->name('index');
+Route::get('/',[App\Http\Controllers\OfferController::class,'index'])->name('index');
 
 Route::get('/about-us', function() {
     return view('pages/about');
@@ -29,13 +29,6 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/admin', function () {
     return view('admin');
 })->name('admin');
 
-Route::get('/offre', function() {
-    return view('pages/offre');
-})->name('offre');
-
-Route::get('/company', function() {
-    return view('pages/company');
-})->name('company');
 
 Route::get('/profil', function() {
     return view('pages/profil');
