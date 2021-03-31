@@ -81,7 +81,7 @@
     </button>
   </div>
     <div class=revenir>
-    <p><a href="offers-">Revenir à la page d'accueil</a></p>
+    <p><a href="offers">Revenir à la page d'accueil</a></p>
 </div>
 
 <p class="pt-6 flex items-center">
