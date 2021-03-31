@@ -60,7 +60,7 @@
               Pilote
             </dt>
             <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-              {{$$user->pilote}}
+              {{$user->pilote}}
             </dd>
         </div>
         <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
