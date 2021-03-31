@@ -1,6 +1,6 @@
 var cacheName = 'js13kPWA-v1';
 var appShellFiles = [
-  '/offline',
+
     '/css/app.css',
     '/js/app.js',
     '/images/icons/icon-72x72.png',
@@ -11,6 +11,7 @@ var appShellFiles = [
     '/images/icons/icon-192x192.png',
     '/images/icons/icon-384x384.png',
     '/images/icons/icon-512x512.png',
+    '/resources/pages/company'
 ];
 // ajout fichiers en cache
 self.addEventListener('install', (e) => {
