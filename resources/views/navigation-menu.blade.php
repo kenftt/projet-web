@@ -6,19 +6,18 @@
                 <!-- Titre -->
                 <div class="flex-shrink-0 flex items-center">
                     <a>
-                        <a class="text-blue-50">{{ env('APP_NAME') }}</a>
+                        <img src="{{asset('icon-96x96.png')}}"
                     </a>
                 </div>
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     @if (Auth::check())
-
-                    <x-jet-nav-link href="offers" :active="request()->routeIs('offers')">
+                    <x-jet-nav-link href="offers" :active="request()->routeIs('offers.index')">
                         {{ __('Offre') }}
                     </x-jet-nav-link>
 
-                    <x-jet-nav-link href="companies" :active="request()->routeIs('company')">
+                    <x-jet-nav-link href="companies" :active="request()->routeIs('companies.index')">
                         {{ __('Entreprise') }}
                     </x-jet-nav-link>
 
