@@ -71,7 +71,7 @@
 
     <!-- JS -->
     <script src="{{asset('js/app.js')}}"></script>
-    
+
     <!-- Script Livewire necessaires -->
     @livewireScripts
 </body>
