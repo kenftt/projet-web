@@ -1,5 +1,5 @@
 <?php
-
+//Fichier dee config de l'app
 return [
 
     /*

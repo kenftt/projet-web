@@ -5,6 +5,7 @@ namespace App\Providers;
 use App\Actions\Jetstream\DeleteUser;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Jetstream\Jetstream;
+use Laravel\Fortify\Fortify;
 
 class JetstreamServiceProvider extends ServiceProvider
 {
@@ -33,6 +34,15 @@ class JetstreamServiceProvider extends ServiceProvider
             \Laravel\Fortify\Contracts\LoginResponse::class,
             \App\Http\Responses\LoginResponse::class
         );
+
+        //custom login vue
+        Fortify::loginView(function () {
+            return view('auth.login');
+        });
+        //custom register vue
+        Fortify::registerView(function () {
+            return view('auth.register');
+        });
     }
 
     /**

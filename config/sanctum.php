@@ -1,5 +1,5 @@
 <?php
-
+//Utilisation de Sanctum pour les tokens 
 return [
 
     /*

@@ -28,7 +28,9 @@
     <meta name="apple-mobile-web-app-status-bar" content="white">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="theme-color" content="white">
-
+    <!-- Script Livewire necessaires -->
+    @livewireStyles
+    {{-- A enlever START--}}
     <style>
         .footer {
             position: fixed;
@@ -41,6 +43,7 @@
         }
 
     </style>
+    {{-- A elever END --}}
 </head>
 
 
@@ -66,10 +69,11 @@
 
     </footer>
 
-
+    <!-- JS -->
     <script src="{{asset('js/app.js')}}"></script>
-
-
+    
+    <!-- Script Livewire necessaires -->
+    @livewireScripts
 </body>
 
 <script>

@@ -1,5 +1,5 @@
 <?php
-
+//Definition de la route home après authentification
 namespace App\Providers;
 
 use Illuminate\Cache\RateLimiting\Limit;
@@ -17,7 +17,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    public const HOME = '/offre';
+    public const HOME = '/offers';
 
     /**
      * The controller namespace for the application.

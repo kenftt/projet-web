@@ -42,7 +42,10 @@ return [
             'prefix' => '',
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ],
-
+        /*
+        | Utilisatation de MySql
+        | START
+        */
         'mysql' => [
             'driver' => 'mysql',
             'url' => env('DATABASE_URL'),
@@ -62,7 +65,10 @@ return [
                 PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
             ]) : [],
         ],
-
+        /*
+        | Utilisatation de MySql
+        | END
+        */
         'pgsql' => [
             'driver' => 'pgsql',
             'url' => env('DATABASE_URL'),
