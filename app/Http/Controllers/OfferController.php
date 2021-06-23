@@ -114,6 +114,6 @@ class OfferController extends Controller
         $offer->delete();
 
         return redirect()->route('offers.index')
-                        ->with('success','Offre supprimée.');
+                        ->with('message','Offre supprimée.');
     }
 }

@@ -112,8 +112,6 @@ class usersController extends Controller
     */
     public function update(Request $user, $id)
     {
-
-
         users::whereid($id)->update([
             'name' => $user['name'],
             'prenom' =>$user['prenom'],

@@ -3,7 +3,7 @@
 @section('content')
 <div class="row">
     <div class="col-lg-12 margin-tb">
-        <div class="pull-left">
+        <div class="header">
             <h2>Ajouter une nouvelle entreprise</h2>
         </div>
         <div class="pull-right">

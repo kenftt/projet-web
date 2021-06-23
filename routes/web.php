@@ -12,32 +12,37 @@ use App\Http\Controllers\Back\AdminController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::resource('offers', App\Http\Controllers\OfferController::class);
-Route::resource('companies', App\Http\Controllers\CompanyController::class);
-Route::resource('users', App\Http\Controllers\usersController::class);
-Route::get('/',[App\Http\Controllers\OfferController::class,'index'])->name('index');
 
-Route::get('/about-us', function() {
-    return view('pages/about');
-})->name('about');
-
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+//route Home
+Route::get('/', function () {
     return view('dashboard');
 })->name('dashboard');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/admin', function () {
-    return view('admin');
-})->name('admin');
 
+//Route nécessitant d'etre log
+Route::group(['middleware' => 'auth'], function() {
+    //route des CRUDs
+    Route::resource('offers', App\Http\Controllers\OfferController::class);
+    Route::resource('companies', App\Http\Controllers\CompanyController::class);
+    Route::resource('users', App\Http\Controllers\usersController::class);
 
-Route::get('/profil', function() {
-    return view('pages/profil');
-})->name('profil');
+    Route::get('/profil', function() {
+        return view('pages/profil');
+    })->name('profil');
 
-Route::get('/wishlist', function() {
-    return view('pages/wishlist');
-})->name('wishlist');
+    Route::get('/wishlist', function() {
+        return view('pages/wishlist');
+    })->name('wishlist');
 
+    Route::get('/admin', function() {
+        return view('admin');
+    })->name('admin');
+
+});
+//Route
+Route::get('/about-us', function() {
+    return view('pages/about');
+})->name('about');
 
 
 Route::get('register', function() {

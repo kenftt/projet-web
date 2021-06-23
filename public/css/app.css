@@ -32717,6 +32717,15 @@ select {
           animation: bounce 1s infinite;
 }
 
+.header
+ {
+  padding: 60px;
+  text-align: center;
+  color: white;
+  background: cornflowerblue;
+  font-size: 30px;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;

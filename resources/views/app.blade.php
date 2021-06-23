@@ -30,26 +30,14 @@
     <meta name="theme-color" content="white">
     <!-- Script Livewire necessaires -->
     @livewireStyles
-    {{-- A enlever START--}}
-    <style>
-        .footer {
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            background-color: whitesmoke;
-            color: white;
-            text-align: center;
-        }
-
-    </style>
-    {{-- A elever END --}}
 </head>
 
 
 <body>
 
     @livewire('navigation-menu')
+
+    
     <main>
         @yield('content')
     </main>
@@ -57,23 +45,21 @@
     <footer class="footer text-muted py-5">
         <div class="container">
             <p class="float-end mb-1">
-                <a href="#">Back to top</a>
+                <a href="#">Retour en haut de la page</a>
             </p>
             <p class="text-muted">&copy; Copyright {{date('Y')}}
                 @if (!Route::is('about'))
-                    &middot; <a href="{{ route('about') }}">About us</a>
+                    &middot; <a href="{{ route('about') }}">A propos de nous</a>
             </p>
 
                 @endif
         </div>
-
     </footer>
 
     <!-- JS -->
     <script src="{{asset('js/app.js')}}"></script>
 
     <!-- Script Livewire necessaires -->
-    @livewireScripts
 </body>
 
 <script>

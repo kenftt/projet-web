@@ -141,6 +141,6 @@ class CompanyController extends Controller
         $company->delete();
 
         return redirect()->route('companies.index')
-                        ->with('success','Entreprise supprimée.');
+                        ->with('message','Entreprise supprimée.');
     }
 }
